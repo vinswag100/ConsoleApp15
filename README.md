@@ -1,9 +1,9 @@
 # C# Console Applications App01 to App05
 | Author | Details |
 | ---- | ---- |
-**Name**: | Student Name  |
-**Student ID**: | 12345678 |
-**Course:** | Computing |
+**Name**: | Vincent Ogieva  |
+**Student ID**: | 22136166 |
+**Course:** | Computing and web development |
 **Module**: | CO453     |
 **Started**: | January 2021 |    
 
