@@ -10,9 +10,9 @@ namespace ConsoleAppProject.App01
     /// </author>
     public class DistanceConverter
     {
-        public const int FEET_IN_MILES = 5280;
+        public const double FEET_IN_MILES = 5280;
 
-        public const int METRES_IN_MILES = 1630;
+        public const double METRES_IN_MILES = 1630;
         public const string FEET = "feet";
         public const string MILES = "miles";
         public const string Metres = "metres";
@@ -42,6 +42,7 @@ namespace ConsoleAppProject.App01
             fromUnit= FEET;
             toUnit= MILES;
             InputDistance(fromUnit);
+            toDistance= fromDistance/FEET_IN_MILES;
             OutputDistance();
          }
 
