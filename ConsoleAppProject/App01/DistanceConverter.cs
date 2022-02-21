@@ -6,58 +6,89 @@ namespace ConsoleAppProject.App01
     /// Please describe the main features of this App
     /// </summary>
     /// <author>
-    /// Derek version 0.1
+    /// Vincent 0.1
     /// </author>
     public class DistanceConverter
     {
         public const int FEET_IN_MILES = 5280;
 
-        private double miles;
-        private double feet;
-        private string number;
+        public const int METRES_IN_MILES = 1630;
+        public const string FEET = "feet";
+        public const string MILES = "miles";
+        public const string Metres = "metres";
+        private double toDistance;
+
+        private string fromUnit;
+        private string toUnit;
+        private double fromDistance;
 
         /// <summary>
-        /// This method will output a heading, ask dfor the
-        /// input for miles, calculate and output the same
+        /// This method will output a heading, ask for the
+        /// Input for miles, calculate and output the some
         /// distance in feet.
         /// </summary>
         public void Run()
         {
             OutputHeading();
+           
 
-            InputMiles();
-            CalculateFeet();
-            OutputFeet();
+
+            ConvertFeetToMiles();
+            //ConvertMilesToMetres();
+            ConvertMilesToFeet();
         }
+         public void ConvertFeetToMiles()
+         {
+            fromUnit= FEET;
+            toUnit= MILES;
+            InputDistance(fromUnit);
+            OutputDistance();
+         }
+
+         public void ConvertMilesToFeet()
+         {
+
+         }
+
+         private void inputFeet()
+         {
+             Console.Write("please input the distance in feet > ");
+
+             string number = Console.ReadLine();
+             fromDistance = Convert.ToDouble(number);
+         }
 
         private static void OutputHeading()
         {
             Console.ForegroundColor = ConsoleColor.Green;
 
-            Console.WriteLine();
-            Console.WriteLine(" ========================");
-            Console.WriteLine("    Distance Converter   ");
-            Console.WriteLine("        by Derek         ");
-            Console.WriteLine(" ========================");
-            Console.WriteLine();
+            Console.WriteLine("\n------------------------------");
+            Console.WriteLine("         Covert Miles to feet ");
+            Console.WriteLine("            by Vincent Ogieva ");
+            Console.WriteLine(" =================================================\n");
         }
 
-        private void OutputFeet()
+        /// <summary>
+        /// Prompt the user to enter the distance in miles
+        /// Input the miles as a double number
+        /// </summary>
+        private void InputDistance(string unit)
         {
-            Console.WriteLine("The number of miles = " + feet);
-        }
-
-        private void CalculateFeet()
-        {
-            feet = miles * FEET_IN_MILES;
-        }
-
-        private void InputMiles()
-        {
-            Console.Write(" Please input the distance in miles > ");
+            Console.Write($"Please enter the number of {unit} > ");
             
-            number = Console.ReadLine();
-            miles = Convert.ToDouble(number);
+            string number = Console.ReadLine();
+            fromDistance = Convert.ToDouble(number);
+        }   
+
+        private void CalculateMiles()
+        {
+            toDistance = fromDistance / 5280;
+        }
+
+        private void OutputDistance()
+        {
+            Console.WriteLine($"{fromDistance} {fromUnit} is {toDistance}  {toUnit}");
         }
     }
 }
+    
