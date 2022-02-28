@@ -29,7 +29,7 @@ namespace ConsoleAppProject.App01
         /// </summary>
         public void Run()
         {
-            OutputHeading();
+              OutputHeading();
            
 
 
@@ -48,7 +48,20 @@ namespace ConsoleAppProject.App01
 
          public void ConvertMilesToFeet()
          {
+            fromUnit= MILES;
+            toUnit= FEET;
+            InputDistance(fromUnit);
+            toDistance= fromDistance*MILES_IN_FEET;
+            OutputDistance();
+        }
 
+         public void ConvertFeetToMetres();
+         {
+             fromUnit= FEET;
+             toUnit = Metres
+             inputDistance(fromUnit);
+             toDistance= fromDistance/Feet_in_Metres
+             OutputDistance();
          }
 
          private void inputFeet()
