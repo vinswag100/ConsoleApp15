@@ -13,9 +13,13 @@ namespace ConsoleAppProject.App01
         public const double FEET_IN_MILES = 5280;
 
         public const double METRES_IN_MILES = 1630;
+
+        public const double FEET_IN_METRES = 3.2;
+
         public const string FEET = "feet";
         public const string MILES = "miles";
         public const string Metres = "metres";
+
         private double toDistance;
 
         private string fromUnit;
@@ -51,16 +55,16 @@ namespace ConsoleAppProject.App01
             fromUnit= MILES;
             toUnit= FEET;
             InputDistance(fromUnit);
-            toDistance= fromDistance*MILES_IN_FEET;
+            toDistance= fromDistance / FEET_IN_MILES;
             OutputDistance();
         }
 
-         public void ConvertFeetToMetres();
+         public void ConvertFeetToMetres()
          {
              fromUnit= FEET;
-             toUnit = Metres
-             inputDistance(fromUnit);
-             toDistance= fromDistance/Feet_in_Metres
+            toUnit = Metres;
+             InputDistance(fromUnit);
+            toDistance = fromDistance / FEET_IN_METRES;
              OutputDistance();
          }
 
