@@ -33,10 +33,7 @@ namespace ConsoleAppProject.App01
         /// </summary>
         public void Run()
         {
-              OutputHeading();
-           
-
-
+            OutputHeading();
             ConvertFeetToMiles();
             //ConvertMilesToMetres();
             ConvertMilesToFeet();
@@ -62,9 +59,9 @@ namespace ConsoleAppProject.App01
          public void ConvertFeetToMetres()
          {
              fromUnit= FEET;
-            toUnit = Metres;
+             toUnit = Metres;
              InputDistance(fromUnit);
-            toDistance = fromDistance / FEET_IN_METRES;
+             toDistance = fromDistance / FEET_IN_METRES;
              OutputDistance();
          }
 
@@ -81,9 +78,9 @@ namespace ConsoleAppProject.App01
             Console.ForegroundColor = ConsoleColor.Green;
 
             Console.WriteLine("\n------------------------------");
-            Console.WriteLine("         Covert Miles to feet ");
-            Console.WriteLine("            by Vincent Ogieva ");
-            Console.WriteLine(" =================================================\n");
+            Console.WriteLine("      Covert Miles to feet ");
+            Console.WriteLine("        by Vincent Ogieva ");
+            Console.WriteLine(" ===============================\n");
         }
 
         /// <summary>
