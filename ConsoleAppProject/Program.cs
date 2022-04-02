@@ -1,4 +1,5 @@
 ﻿using ConsoleAppProject.App01;
+using ConsoleAppProject.App04;
 using System;
 
 namespace ConsoleAppProject
@@ -23,8 +24,10 @@ namespace ConsoleAppProject
             Console.WriteLine("--------------------------------------------------=");
             Console.WriteLine();
 
-            DistanceConverter converter = new DistanceConverter();
-            converter.Run();
+            //DistanceConverter converter = new DistanceConverter();
+            //converter.Run();
+            NetworkApp app04 = new NetworkApp();
+            app04.Run();
 
             Console.ForegroundColor = ConsoleColor.Black;
         }
