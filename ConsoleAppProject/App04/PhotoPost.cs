@@ -11,22 +11,13 @@ namespace ConsoleAppProject.App04
     /// Michael Kölling and David J. Barnes
     /// @version 0.1
     /// </author>
-    public class PhotoPost : post
+    public class PhotoPost : Post
     {
-        // username of the post's author
-        public String Username { get; set; }
-
         // the name of the image file
         public String Filename { get; set; }
         
         // a one line image caption
         public String Caption { get; set; }   
-        
-        public DateTime Timestamp { get; }
-
-        private int likes;
-        
-        private readonly  List<String> comments;
 
         ///<summary>
         /// Constructor for objects of class PhotoPost.
@@ -45,9 +36,7 @@ namespace ConsoleAppProject.App04
           
             this.Filename = filename;
             this.Caption = caption;
-           
         }
-
     }
 }
 

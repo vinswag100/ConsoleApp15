@@ -1,10 +1,8 @@
 ﻿using System;
 
-
-
 namespace ConsoleAppProject.App04
 {
-    public NetworkApp()
+    public class  NetworkApp
     {
        
     }

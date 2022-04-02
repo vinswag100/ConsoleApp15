@@ -34,7 +34,7 @@ namespace ConsoleAppProject.App04
             MessagePost post = new MessagePost(AUTHOR, "I love visual studio");
             AddMessagePost(post);
 
-            PhotoPost photoPost = new PhotoPost(AUTHOR), "photo.jpg"; "Visual studio");
+            PhotoPost photoPost = new PhotoPost(AUTHOR, "photo.jpg", "Visual studio");
             AddPhotoPost(photoPost);
         }
 
@@ -46,7 +46,8 @@ namespace ConsoleAppProject.App04
         ///</summary>
         public void AddMessagePost(MessagePost message)
         {
-            messages.Add(message);
+            
+            posts.Add(message);
         }
 
         ///<summary>
